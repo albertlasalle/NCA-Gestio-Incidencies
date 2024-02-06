@@ -55,6 +55,10 @@
 
 <a href="{{ route('admin/productos/crear') }}" class="btn btn-success mt-4 ml-3"> Agregar </a>
 
+<a href="{{ route('logout') }}" class="btn btn-success mt-4 ml-3"> Cerrar Session </a>
+
+
+
 <body>
 
     <script type="text/javascript">

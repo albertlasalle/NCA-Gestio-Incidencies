@@ -2,7 +2,7 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('admin/productos') }}">
         @csrf
 
         <!-- Email Address -->
@@ -38,6 +38,8 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
+
+            <a href="{{ route('register') }}" class="ms-3">Register</a>
 
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}

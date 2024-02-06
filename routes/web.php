@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
 /* Crear */
@@ -43,6 +44,9 @@ Route::put('admin/productos/update/{id}', 'App\Http\Controllers\ProductosControl
 Route::put('admin/productos/eliminar/{id}', 'App\Http\Controllers\ProductosController@eliminar')->name('admin/productos/eliminar'); 
  
 /* Vista Principal */
+
+Route::post('admin/productos', 'App\Http\Controllers\ProductosController@index')->name('admin/productos');
+
 Route::get('admin/productos', 'App\Http\Controllers\ProductosController@index')->name('admin/productos');
 
 require __DIR__.'/auth.php';
