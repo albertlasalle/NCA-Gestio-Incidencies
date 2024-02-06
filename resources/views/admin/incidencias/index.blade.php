@@ -46,6 +46,8 @@
 
 <a href="{{ route('admin/incidencias/crear') }}" class="btn btn-success mt-4 ml-3"> Agregar </a>
 
+<a href="{{ route('admin/empresas') }}" class="btn btn-success mt-4 ml-3"> Empresas </a>
+
 
 
 <a href="{{ route('logout') }}" class="btn btn-success mt-4 ml-3"> Cerrar Sesión </a>

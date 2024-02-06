@@ -71,4 +71,30 @@ Route::put('admin/incidencias/eliminar/{id}', 'App\Http\Controllers\IncidenciasC
 Route::get('admin/incidencias', 'App\Http\Controllers\IncidenciasController@index')->name('admin/incidencias'); 
 Route::post('admin/incidencias', 'App\Http\Controllers\IncidenciasController@index')->name('admin/incidencias'); 
 
+/* Empresas */
+
+/* Crear */
+
+Route::get('admin/empresas/crear', 'App\Http\Controllers\EmpresasController@crear')->name('admin/empresas/crear');
+Route::put('admin/empresas/store', 'App\Http\Controllers\EmpresasController@store')->name('admin/empresas/store');
+
+/* Leer */
+
+Route::get('admin/empresas/show/{id}', 'App\Http\Controllers\EmpresasController@show')->name('admin/empresas/detalles');
+
+/* Actualizar */
+
+Route::get('admin/empresas/actualizar/{id}', 'App\Http\Controllers\EmpresasController@actualizar')->name('admin/empresas/actualizar');
+Route::put('admin/empresas/update/{id}', 'App\Http\Controllers\EmpresasController@update')->name('admin/empresas/update');
+
+/* Eliminar */
+
+Route::put('admin/empresas/eliminar/{id}', 'App\Http\Controllers\EmpresasController@eliminar')->name('admin/empresas/eliminar');
+
+/* Vista Principal */
+
+Route::get('admin/empresas', 'App\Http\Controllers\EmpresasController@index')->name('admin/empresas');
+Route::post('admin/empresas', 'App\Http\Controllers\EmpresasController@index')->name('admin/empresas');
+
+
 require __DIR__.'/auth.php';

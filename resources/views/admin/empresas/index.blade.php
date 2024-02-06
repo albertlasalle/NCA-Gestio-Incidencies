@@ -14,28 +14,28 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Descripción</th> <!-- Nuevo campo -->
-      <th>Categoría</th> <!-- Nuevo campo -->
-      <th>Estado</th> <!-- Nuevo campo -->
-      <th>Imagen</th>
+      <th>Categoría</th>
+      <th>Población</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Email</th>
       <th>Acciones</th>
     </tr>
   </thead>
   <tbody> 
-    @foreach($incidencias as $incidencia) <tr>
-      <td class="v-align-middle">{{$incidencia->nombre}}</td>
-      <td class="v-align-middle">{{$incidencia->descripcion}}</td> <!-- Nuevo campo -->
-      <td class="v-align-middle">{{$incidencia->categoria}}</td> <!-- Nuevo campo -->
-      <td class="v-align-middle">{{$incidencia->estado}}</td> <!-- Nuevo campo -->
+    @foreach($empresas as $empresa) <tr>
+      <td class="v-align-middle">{{$empresa->nombre}}</td>
+      <td class="v-align-middle">{{$empresa->categoria}}</td>
+      <td class="v-align-middle">{{$empresa->poblacion}}</td>
+      <td class="v-align-middle">{{$empresa->direccion}}</td>
+      <td class="v-align-middle">{{$empresa->telefono}}</td>
+      <td class="v-align-middle">{{$empresa->email}}</td>
       <td class="v-align-middle">
-        <img src="{{ asset("uploads/$incidencia->img") }}" width="80" height="80" class="img-responsive">
-      </td>
-      <td class="v-align-middle">
-        <form action="{{ route('admin/incidencias/eliminar',$incidencia->id) }}" method="POST" class="form-horizontal" role="form" onsubmit="return confirmarEliminar()">
+        <form action="{{ route('admin/empresas/eliminar',$empresa->id) }}" method="POST" class="form-horizontal" role="form" onsubmit="return confirmarEliminar()">
           <input type="hidden" name="_method" value="PUT">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <a href="{{ route('admin/incidencias/detalles',$incidencia->id) }}" class="btn btn-dark">Detalles</a>
-          <a href="{{ route('admin/incidencias/actualizar',$incidencia->id) }}" class="btn btn-primary">Editar</a>
+          <a href="{{ route('admin/empresas/detalles',$empresa->id) }}" class="btn btn-dark">Detalles</a>
+          <a href="{{ route('admin/empresas/actualizar',$empresa->id) }}" class="btn btn-primary">Editar</a>
           <button type="submit" class="btn btn-danger">Eliminar</button>
         </form>
       </td>
@@ -44,9 +44,7 @@
    </tbody>
 </table>
 
-<a href="{{ route('admin/incidencias/crear') }}" class="btn btn-success mt-4 ml-3"> Agregar </a>
-
-
+<a href="{{ route('admin/empresas/crear') }}" class="btn btn-success mt-4 ml-3"> Agregar </a>
 
 <a href="{{ route('logout') }}" class="btn btn-success mt-4 ml-3"> Cerrar Sesión </a>
 

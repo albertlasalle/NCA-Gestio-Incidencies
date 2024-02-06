@@ -35,7 +35,6 @@ class EmpresasController extends Controller
         $empresa->telefono = $request->telefono; // Añadido el campo "telefono"
         $empresa->email = $request->email; // Añadido el campo "email"
 
-        $empresa->img = $request->file('img')->store('/');
 
         $empresa->created_at = (new DateTime)->getTimestamp();
 
@@ -66,10 +65,6 @@ class EmpresasController extends Controller
         $empresa->direccion = $request->direccion; // Añadido el campo "direccion"
         $empresa->telefono = $request->telefono; // Añadido el campo "telefono"
         $empresa->email = $request->email; // Añadido el campo "email"
-
-        if ($request->hasFile('img')) {
-            $empresa->img = $request->file('img')->store('/');
-        }
 
         $empresa->updated_at = (new DateTime)->getTimestamp();
 
