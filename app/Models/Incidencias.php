@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Incidencias extends Model
 {
     use HasFactory;
+
+    protected $table = 'incidencias';
+
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'categoria',
+        'estado',
+        'img'
+    ];
+    
 }
