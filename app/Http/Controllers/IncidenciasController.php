@@ -15,8 +15,6 @@ use DateTime;
 use Illuminate\Support\Facades\Session;     
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\ItemIncidenciaCreateRequest;
-use App\Http\Requests\ItemIncidenciaUpdateRequest;
 
 class IncidenciasController extends Controller
 {
