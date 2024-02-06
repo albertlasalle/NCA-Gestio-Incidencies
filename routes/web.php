@@ -49,4 +49,25 @@ Route::post('admin/productos', 'App\Http\Controllers\ProductosController@index')
 
 Route::get('admin/productos', 'App\Http\Controllers\ProductosController@index')->name('admin/productos');
 
+
+
+/* Incidencias */
+
+/* Crear */
+Route::get('admin/incidencias/crear', 'App\Http\Controllers\IncidenciasController@crear')->name('admin/incidencias/crear'); // Cambio de "productos" a "incidencias"
+Route::put('admin/incidencias/store', 'App\Http\Controllers\IncidenciasController@store')->name('admin/incidencias/store'); // Cambio de "productos" a "incidencias"
+ 
+/* Leer */ 
+Route::get('admin/incidencias/show/{id}', 'App\Http\Controllers\IncidenciasController@show')->name('admin/incidencias/detalles'); // Cambio de "productos" a "incidencias"
+ 
+/* Actualizar */
+Route::get('admin/incidencias/actualizar/{id}', 'App\Http\Controllers\IncidenciasController@actualizar')->name('admin/incidencias/actualizar'); // Cambio de "productos" a "incidencias"
+Route::put('admin/incidencias/update/{id}', 'App\Http\Controllers\IncidenciasController@update')->name('admin/incidencias/update'); // Cambio de "productos" a "incidencias"
+ 
+/* Eliminar */
+Route::put('admin/incidencias/eliminar/{id}', 'App\Http\Controllers\IncidenciasController@eliminar')->name('admin/incidencias/eliminar'); // Cambio de "productos" a "incidencias"
+ 
+/* Vista Principal */
+Route::get('admin/incidencias', 'App\Http\Controllers\IncidenciasController@index')->name('admin/incidencias'); // Cambio de "productos" a "incidencias"
+
 require __DIR__.'/auth.php';

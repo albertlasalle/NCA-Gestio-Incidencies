@@ -4,33 +4,33 @@
 		<section class="panel"> 
 			<div class="panel-body">
  
-				@if ( !empty ( $productos->id) )
+				@if ( !empty ( $incidencias->id) )
  
 					<div class="mb-3">
 						<label for="nombre" class="negrita">Nombre:</label> 
 						<div>
-							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $productos->nombre }}"> 
+							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $incidencias->nombre }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
 						<label for="descripcion" class="negrita">Descripcion:</label> 
 						<div>
-							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $productos->precio }}"> 
+							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $incidencias->descripcion }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
 						<label for="categoria" class="negrita">Categoria:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $productos->stock }}"> 
+							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->categoria }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="estado" class="negrita">Estado:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $productos->stock }}"> 
+							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->estado }}"> 
 						</div>
 					</div>
  
@@ -41,15 +41,15 @@
 							<br>
 							<br>
  
-							@if ( !empty ( $productos->img) )
+							@if ( !empty ( $incidencias->img) )
  
 								<span>Imagen Actual: </span>
 								<br>
-								<img src="../../../uploads/{{ $productos->img }}" width="200" class="img-fluid">
+								<img src="../../../uploads/{{ $incidencias->img }}" width="200" class="img-fluid">
  
 							@else
  
-								Aún no se ha cargado una imagen para este producto
+								Aún no se ha cargado una imagen para esta incidencia
  
 							@endif
  
@@ -58,25 +58,33 @@
 					</div>
  
 					@else
- 
+
 					<div class="mb-3">
 						<label for="nombre" class="negrita">Nombre:</label> 
 						<div>
-							<input class="form-control"  required="required" name="nombre" type="text" id="nombre"> 
+							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $incidencias->nombre }}"> 
+						</div>
+					</div>
+
+ 
+					<div class="mb-3">
+						<label for="descripcion" class="negrita">Descripcion:</label> 
+						<div>
+							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $incidencias->descripcion }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
-						<label for="precio" class="negrita">Precio:</label> 
+						<label for="categoria" class="negrita">Categoria:</label> 
 						<div>
-							<input class="form-control"  required="required" name="precio" type="text" id="precio"> 
+							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->categoria }}"> 
 						</div>
 					</div>
- 
+
 					<div class="mb-3">
-						<label for="stock" class="negrita">Stock:</label> 
+						<label for="estado" class="negrita">Estado:</label> 
 						<div>
-							<input class="form-control" " required="required" name="stock" type="text" id="stock"> 
+							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->estado }}"> 
 						</div>
 					</div>
  
@@ -90,7 +98,7 @@
 				@endif
  
 				<button type="submit" class="btn btn-info">Guardar</button>
-				<a href="{{ route('admin/productos') }}" class="btn btn-warning">Cancelar</a>
+				<a href="{{ route('admin/incidencias') }}" class="btn btn-warning">Cancelar</a>
  
 				<br>
 				<br>

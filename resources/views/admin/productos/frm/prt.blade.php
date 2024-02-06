@@ -69,7 +69,7 @@
 					<div class="mb-3">
 						<label for="stock" class="negrita">Stock:</label> 
 						<div>
-							<input class="form-control" " required="required" name="stock" type="text" id="stock"> 
+							<input class="form-control"  required="required" name="stock" type="text" id="stock"> 
 						</div>
 					</div>
  
