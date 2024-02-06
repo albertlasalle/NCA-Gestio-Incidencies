@@ -14,14 +14,21 @@
 					</div>
  
 					<div class="mb-3">
-						<label for="precio" class="negrita">Precio:</label> 
+						<label for="descripcion" class="negrita">Descripcion:</label> 
 						<div>
 							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $productos->precio }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
-						<label for="stock" class="negrita">Stock:</label> 
+						<label for="categoria" class="negrita">Categoria:</label> 
+						<div>
+							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $productos->stock }}"> 
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="estado" class="negrita">Estado:</label> 
 						<div>
 							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $productos->stock }}"> 
 						</div>
