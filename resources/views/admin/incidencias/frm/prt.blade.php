@@ -14,23 +14,23 @@
 					</div>
  
 					<div class="mb-3">
-						<label for="descripcion" class="negrita">Descripcion:</label> 
+						<label for="descripcion" class="negrita">Descripción:</label> 
 						<div>
-							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $incidencias->descripcion }}"> 
+							<input class="form-control"  required="required" name="descripcion" type="text" id="descripcion" value="{{ $incidencias->descripcion }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
-						<label for="categoria" class="negrita">Categoria:</label> 
+						<label for="categoria" class="negrita">Categoría:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->categoria }}"> 
+							<input class="form-control" required="required" name="categoria" type="text" id="categoria" value="{{ $incidencias->categoria }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="estado" class="negrita">Estado:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->estado }}"> 
+							<input class="form-control" required="required" name="estado" type="text" id="estado" value="{{ $incidencias->estado }}"> 
 						</div>
 					</div>
  
@@ -58,33 +58,32 @@
 					</div>
  
 					@else
-
+ 
 					<div class="mb-3">
 						<label for="nombre" class="negrita">Nombre:</label> 
 						<div>
-							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $incidencias->nombre }}"> 
-						</div>
-					</div>
-
- 
-					<div class="mb-3">
-						<label for="descripcion" class="negrita">Descripcion:</label> 
-						<div>
-							<input class="form-control"  required="required" name="precio" type="text" id="precio" value="{{ $incidencias->descripcion }}"> 
+							<input class="form-control"  required="required" name="nombre" type="text" id="nombre"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
-						<label for="categoria" class="negrita">Categoria:</label> 
+						<label for="descripcion" class="negrita">Descripción:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->categoria }}"> 
+							<input class="form-control"  required="required" name="descripcion" type="text" id="descripcion"> 
+						</div>
+					</div>
+ 
+					<div class="mb-3">
+						<label for="categoria" class="negrita">Categoría:</label> 
+						<div>
+							<input class="form-control" required="required" name="categoria" type="text" id="categoria"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="estado" class="negrita">Estado:</label> 
 						<div>
-							<input class="form-control" required="required" name="stock" type="text" id="stock" value="{{ $incidencias->estado }}"> 
+							<input class="form-control" required="required" name="estado" type="text" id="estado"> 
 						</div>
 					</div>
  
@@ -106,4 +105,4 @@
 			</div>
 		</section>
 	</div>
-</div> 
+</div>
