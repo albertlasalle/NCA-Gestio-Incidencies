@@ -92,4 +92,5 @@ class EmpresasController extends Controller
         $empresas = Empresas::all();
         return view('admin.empresas.index', compact('empresas'));
     }
+
 }

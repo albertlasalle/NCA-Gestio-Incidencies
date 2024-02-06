@@ -3,47 +3,47 @@
 		<section class="panel"> 
 			<div class="panel-body">
  
-				@if (!empty($empresas->id))
+				@if (!empty($empresa->id))
  
 					<div class="mb-3">
 						<label for="nombre" class="negrita">Nombre:</label> 
 						<div>
-							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $empresas->nombre }}"> 
+							<input class="form-control" required="required" name="nombre" type="text" id="nombre" value="{{ $empresa->nombre }}"> 
 						</div>
 					</div>
  
 					<div class="mb-3">
 						<label for="categoria" class="negrita">Categoría:</label> 
 						<div>
-							<input class="form-control" required="required" name="categoria" type="text" id="categoria" value="{{ $empresas->categoria }}"> 
+							<input class="form-control" required="required" name="categoria" type="text" id="categoria" value="{{ $empresa->categoria }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="poblacion" class="negrita">Población:</label> 
 						<div>
-							<input class="form-control" required="required" name="poblacion" type="text" id="poblacion" value="{{ $empresas->poblacion }}"> 
+							<input class="form-control" required="required" name="poblacion" type="text" id="poblacion" value="{{ $empresa->poblacion }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="direccion" class="negrita">Dirección:</label> 
 						<div>
-							<input class="form-control" required="required" name="direccion" type="text" id="direccion" value="{{ $empresas->direccion }}"> 
+							<input class="form-control" required="required" name="direccion" type="text" id="direccion" value="{{ $empresa->direccion }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="telefono" class="negrita">Teléfono:</label> 
 						<div>
-							<input class="form-control" required="required" name="telefono" type="text" id="telefono" value="{{ $empresas->telefono }}"> 
+							<input class="form-control" required="required" name="telefono" type="text" id="telefono" value="{{ $empresa->telefono }}"> 
 						</div>
 					</div>
 
 					<div class="mb-3">
 						<label for="email" class="negrita">Email:</label> 
 						<div>
-							<input class="form-control" required="required" name="email" type="email" id="email" value="{{ $empresas->email }}"> 
+							<input class="form-control" required="required" name="email" type="email" id="email" value="{{ $empresa->email }}"> 
 						</div>
 					</div>
  

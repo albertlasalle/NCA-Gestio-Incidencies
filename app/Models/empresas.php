@@ -13,7 +13,6 @@ class empresas extends Model
 
     protected $fillable = [
         'nombre',
-        'logo',
         'categoria',
         'poblacion',
         'direccion',
