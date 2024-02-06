@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="mb-3">
-						<label for="telefono" class="negrita">Teléfono:</label> 
+						<label for="telefono" class="negrita">Teléfono Móvil:</label> 
 						<div>
 							<input class="form-control" required="required" name="telefono" type="text" id="telefono" value="{{ $empresa->telefono }}"> 
 						</div>
@@ -79,7 +79,7 @@
 					</div>
 
 					<div class="mb-3">
-						<label for="telefono" class="negrita">Teléfono:</label> 
+						<label for="telefono" class="negrita">Teléfono Móvil:</label> 
 						<div>
 							<input class="form-control" required="required" name="telefono" type="text" id="telefono"> 
 						</div>

@@ -16,9 +16,6 @@
       <th>Nombre</th>
       <th>Categoría</th>
       <th>Población</th>
-      <th>Dirección</th>
-      <th>Teléfono</th>
-      <th>Email</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -27,9 +24,6 @@
       <td class="v-align-middle">{{$empresa->nombre}}</td>
       <td class="v-align-middle">{{$empresa->categoria}}</td>
       <td class="v-align-middle">{{$empresa->poblacion}}</td>
-      <td class="v-align-middle">{{$empresa->direccion}}</td>
-      <td class="v-align-middle">{{$empresa->telefono}}</td>
-      <td class="v-align-middle">{{$empresa->email}}</td>
       <td class="v-align-middle">
         <form action="{{ route('admin/empresas/eliminar',$empresa->id) }}" method="POST" class="form-horizontal" role="form" onsubmit="return confirmarEliminar()">
           <input type="hidden" name="_method" value="PUT">
@@ -45,6 +39,8 @@
 </table>
 
 <a href="{{ route('admin/empresas/crear') }}" class="btn btn-success mt-4 ml-3"> Agregar </a>
+
+<a href="{{ route('admin/incidencias') }}" class="btn btn-success mt-4 ml-3"> Incidencias </a>
 
 <a href="{{ route('logout') }}" class="btn btn-success mt-4 ml-3"> Cerrar Sesión </a>
 
