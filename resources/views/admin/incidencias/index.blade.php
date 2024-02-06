@@ -14,8 +14,9 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Precio</th>
-      <th>Stock</th>
+      <th>Descripción</th> <!-- Nuevo campo -->
+      <th>Categoría</th> <!-- Nuevo campo -->
+      <th>Estado</th> <!-- Nuevo campo -->
       <th>Imagen</th>
       <th>Acciones</th>
     </tr>
@@ -23,8 +24,9 @@
   <tbody> 
     @foreach($incidencias as $incidencia) <tr>
       <td class="v-align-middle">{{$incidencia->nombre}}</td>
-      <td class="v-align-middle">{{$incidencia->precio}}</td>
-      <td class="v-align-middle">{{$incidencia->stock}}</td>
+      <td class="v-align-middle">{{$incidencia->descripcion}}</td> <!-- Nuevo campo -->
+      <td class="v-align-middle">{{$incidencia->categoria}}</td> <!-- Nuevo campo -->
+      <td class="v-align-middle">{{$incidencia->estado}}</td> <!-- Nuevo campo -->
       <td class="v-align-middle">
         <img src="{{ asset("uploads/$incidencia->img") }}" width="80" height="80" class="img-responsive">
       </td>

@@ -6,15 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Incidencias; // Cambio de "Productos" a "Incidencias"
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ItemCreateRequest;
+use App\Http\Requests\IncidenciaCreateRequest;
 use App\Http\Requests\ItemUpdateRequest;
 use Illuminate\Support\Facades\Validator;
 use DB;
 use Illuminate\Support\Facades\Input;
 use DateTime;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Session;     
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\ItemIncidenciaCreateRequest;
+use App\Http\Requests\ItemIncidenciaUpdateRequest;
 
 class IncidenciasController extends Controller
 {
@@ -24,20 +26,21 @@ class IncidenciasController extends Controller
         $incidencias = Incidencias::all(); // Cambio de "Productos" a "Incidencias"
         return view('admin.incidencias.crear', compact('incidencias')); // Cambio de "productos" a "incidencias"
     }
-    public function store(ItemCreateRequest $request)
+    public function store(IncidenciaCreateRequest $request)
     {
         // Instancio al modelo Incidencias que hace llamado a la tabla 'incidencias' de la Base de Datos
         $incidencias = new Incidencias; // Cambio de "Productos" a "Incidencias"
 
         // Recibo todos los datos del formulario de la vista 'crear.blade.php'
         $incidencias->nombre = $request->nombre; // Cambio de "nombre" a "nombre"
-        $incidencias->precio = $request->precio; // Cambio de "precio" a "precio"
-        $incidencias->stock = $request->stock; // Cambio de "stock" a "stock"
+        $incidencias->descripcion = $request->descripcion; // Añado el campo "descripcion"
+        $incidencias->categoria = $request->categoria; // Añado el campo "categoria"
+        $incidencias->estado = $request->estado; // Añado el campo "estado"
 
-        // Almacenos la imagen en la carpeta publica especifica, esto lo veremos más adelante 
+        // Almaceno la imagen en la carpeta pública especifica, esto lo veremos más adelante 
         $incidencias->img = $request->file('img')->store('/'); // Cambio de "productos" a "incidencias"
 
-        // Guardamos la fecha de creación del registro 
+        // Guardo la fecha de creación del registro 
         $incidencias->created_at = (new DateTime)->getTimestamp();
 
         // Inserto todos los datos en mi tabla 'incidencias' 
@@ -64,8 +67,9 @@ class IncidenciasController extends Controller
         // Recibo todos los datos desde el formulario Actualizar
         $incidencias = Incidencias::find($id); // Cambio de "Productos" a "Incidencias"
         $incidencias->nombre = $request->nombre; // Cambio de "nombre" a "nombre"
-        $incidencias->precio = $request->precio; // Cambio de "precio" a "precio"
-        $incidencias->stock = $request->stock; // Cambio de "stock" a "stock"
+        $incidencias->descripcion = $request->descripcion; // Añado el campo "descripcion"
+        $incidencias->categoria = $request->categoria; // Añado el campo "categoria"
+        $incidencias->estado = $request->estado; // Añado el campo "estado"
 
         // Recibo la imagen desde el formulario Actualizar
         if ($request->hasFile('img')) {
@@ -98,7 +102,7 @@ class IncidenciasController extends Controller
         Incidencias::destroy($id); // Cambio de "Productos" a "Incidencias"
 
         // Opcional: Si deseas guardar la fecha de eliminación de un registro, debes mantenerlo en 
-        // una tabla llamada por ejemplo 'incidencias_eliminados' y alli guardas su fecha de eliminación 
+        // una tabla llamada por ejemplo 'incidencias_eliminados' y allí guardas su fecha de eliminación 
         // $incidencias->deleted_at = (new DateTime)->getTimestamp();
 
         // Muestro un mensaje y redirecciono a la vista principal 
