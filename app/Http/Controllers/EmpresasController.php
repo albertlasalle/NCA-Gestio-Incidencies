@@ -31,8 +31,9 @@ class EmpresasController extends Controller
         $empresa->nombre = $request->nombre;
         $empresa->categoria = $request->categoria;
         $empresa->poblacion = $request->poblacion; // Añadido el campo "poblacion"
-        $empresa->direccion = $request->direccion; // Añadido el campo "direccion"
-        $empresa->telefono = $request->telefono; // Añadido el campo "telefono"
+        $empresa->direccion = $request->direccion;
+        $empresa->telefono_fijo = $request->telefono_fijo; // Añadido el campo "telefono_fijo"
+        $empresa->telefono_movil = $request->telefono_movil; // Añadido el campo "telefono_movil"
         $empresa->email = $request->email; // Añadido el campo "email"
 
 
@@ -63,7 +64,8 @@ class EmpresasController extends Controller
         $empresa->categoria = $request->categoria;
         $empresa->poblacion = $request->poblacion; // Añadido el campo "poblacion"
         $empresa->direccion = $request->direccion; // Añadido el campo "direccion"
-        $empresa->telefono = $request->telefono; // Añadido el campo "telefono"
+        $empresa->telefono_fijo = $request->telefono_fijo; // Añadido el campo "telefono_fijo"
+        $empresa->telefono_movil = $request->telefono_movil; // Añadido el campo "telefono_movil"
         $empresa->email = $request->email; // Añadido el campo "email"
 
         $empresa->updated_at = (new DateTime)->getTimestamp();

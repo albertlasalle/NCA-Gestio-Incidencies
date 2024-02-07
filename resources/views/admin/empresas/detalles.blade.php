@@ -19,8 +19,11 @@
   <p class="h5">Dirección:</p>
   <p class="h6 mb-3">{{ $empresa->direccion }}</p>
 
+  <p class="h5">Teléfono Fijo:</p>
+  <p class="h6 mb-3">{{ $empresa->telefono_fijo }}</p>
+
   <p class="h5">Teléfono Móvil:</p>
-  <p class="h6 mb-3">{{ $empresa->telefono }}</p>
+  <p class="h6 mb-3">{{ $empresa->telefono_movil }}</p>
 
   <p class="h5">Email:</p>
   <p class="h6 mb-3">{{ $empresa->email }}</p>
@@ -49,7 +52,7 @@
 
     </style>
 
-    <a href="http://wa.me/34<?php echo $empresa->telefono; ?>?text=Hola bon dia" target="_blank" rel="noopener noreferrer">
+    <a href="http://wa.me/34<?php echo $empresa->telefono_movil; ?>?text=Hola, hem tingut una incidencia" target="_blank" rel="noopener noreferrer">
   
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552">

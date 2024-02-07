@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('categoria');
             $table->string('poblacion');
             $table->string('direccion');
-            $table->string('telefono');
+            $table->string('telefono_fijo');
+            $table->string('telefono_movil');
             $table->string('email');
             $table->timestamps();
         });

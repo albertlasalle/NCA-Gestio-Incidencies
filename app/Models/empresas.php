@@ -16,7 +16,8 @@ class empresas extends Model
         'categoria',
         'poblacion',
         'direccion',
-        'telefono',
+        'telefono_fijo',
+        'telefono_movil',
         'email'
     ];
 }

@@ -26,8 +26,9 @@ class EmpresaCreateRequest extends FormRequest
             'categoria' => 'required',
             'poblacion' => 'required',
             'direccion' => 'required',
-            'telefono' => 'required',
-            'email' => 'required|email'
+            'telefono_fijo' => 'required',
+            'telefono_movil' => 'required',
+            'email' => 'required'
         ];
     }
 }

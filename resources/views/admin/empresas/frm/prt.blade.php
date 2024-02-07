@@ -34,9 +34,15 @@
 					</div>
 
 					<div class="mb-3">
+						<label for="telefono_fijo" class="negrita">Teléfono Fijo:</label> 
+						<div>
+							<input class="form-control" required="required" name="telefono_fijo" type="number" id="telefono_fijo" value="{{ $empresa->telefono_fijo }}"> 
+						</div>
+
+					<div class="mb-3">
 						<label for="telefono" class="negrita">Teléfono Móvil:</label> 
 						<div>
-							<input class="form-control" required="required" name="telefono" type="text" id="telefono" value="{{ $empresa->telefono }}"> 
+							<input class="form-control" required="required" name="telefono_movil" type="number" id="telefono_movil" value="{{ $empresa->telefono_movil }}"> 
 						</div>
 					</div>
 
@@ -79,9 +85,15 @@
 					</div>
 
 					<div class="mb-3">
-						<label for="telefono" class="negrita">Teléfono Móvil:</label> 
+						<label for="telefono_fijo" class="negrita">Teléfono Fijo:</label> 
 						<div>
-							<input class="form-control" required="required" name="telefono" type="text" id="telefono"> 
+							<input class="form-control" required="required" name="telefono_fijo" type="number" id="telefono_fijo"> 
+						</div>
+
+					<div class="mb-3">
+						<label for="telefono_movil" class="negrita">Teléfono Móvil:</label> 
+						<div>
+							<input class="form-control" required="required" name="telefono_movil" type="number" id="telefono_movil"> 
 						</div>
 					</div>
 
