@@ -18,7 +18,7 @@
 
             <a href="{{ route('admin/incidencias') }}" class="btn btn-success mt-4 ml-3"> Incidencias </a>
 
-                <a href="{{ route('admin/empresas') }}" class="btn btn-success mt-4 ml-3"> Empresas </a>
+            <a href="{{ route('admin/empresas') }}" class="btn btn-success mt-4 ml-3"> Empresas </a>
         </div>
     </div>
 
