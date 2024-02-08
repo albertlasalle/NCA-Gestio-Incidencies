@@ -33,7 +33,7 @@
 					<select class="form-control" name="estado" id="estado">
 							<option value="Sense Resoldre" {{ $incidencias->estado == 'Sense Resoldre' ? 'selected' : '' }}>Sense Resoldre</option>
 							<option value="En Procés" {{ $incidencias->estado == 'En Procés' ? 'selected' : '' }}>En Procés</option>
-						</select>
+					</select>
 					</div>
 				</div>
 
@@ -91,7 +91,7 @@
 			<div class="mb-3">
 				<label for="img" class="negrita">Selecciona una imagen:</label>
 				<div>
-					<input name="img" type="file" id="img">
+					<input name="img" type="file" id="img" required="required">
 				</div>
 			</div>
 
