@@ -22,7 +22,7 @@ class IncidenciaCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required|unique:incidencias|max:255',
+            'nombre' => 'required',
             'descripcion' => 'required',
             'categoria' => 'required',
             'estado' => 'required',

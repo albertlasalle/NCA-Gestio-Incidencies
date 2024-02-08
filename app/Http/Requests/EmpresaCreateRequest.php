@@ -22,7 +22,7 @@ class EmpresaCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required|unique:empresas|max:255',
+            'nombre' => 'required',
             'categoria' => 'required',
             'poblacion' => 'required',
             'direccion' => 'required',

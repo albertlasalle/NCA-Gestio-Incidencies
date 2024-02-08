@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+
     /* Productos */
 
     /* Crear */
@@ -93,11 +94,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('admin/empresas', 'App\Http\Controllers\EmpresasController@index')->name('admin/empresas');
     Route::post('admin/empresas', 'App\Http\Controllers\EmpresasController@index')->name('admin/empresas');
-
+    
 
 });
-
-
 
 
 require __DIR__.'/auth.php';

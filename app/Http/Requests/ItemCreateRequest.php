@@ -22,7 +22,7 @@ class ItemCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required|unique:productos|max:255',
+            'nombre' => 'required',
             'stock' => 'required',
             'precio' => 'required',
         ];
