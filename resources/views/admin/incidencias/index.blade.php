@@ -1,6 +1,6 @@
+
 @vite(['resources/js/app.js'])
 
-<html>
 
 @if(Session::has('message'))
 <div class="alert alert-primary" role="alert">
@@ -10,7 +10,7 @@
 
 <body>
 
-<table class="table table-striped table-bordered table-hover">
+<table id = "myTable" class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>Nombre</th>
